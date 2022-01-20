@@ -9,6 +9,8 @@ namespace RecursiveFunctions
 {
     class Program
     {
+        static Action<string> display = s => Console.WriteLine($"{s}");
+
         //Factorial Method
         public static int Factorial(int num)
         {
@@ -38,9 +40,9 @@ namespace RecursiveFunctions
             long fibNum = 10;
 
             // Send to Method and Print to Console
-            Console.WriteLine($"The Factorial of {factNum2Display} is: {Factorial(factNum2Display)}");            
-            Console.WriteLine($"The Fibonacci number of {fibNum} is: {FIbonacci(fibNum)}");
-            Console.WriteLine($"The division of 15 & 3 is: {Divide(16.6, 4)}");
+            display($"The Factorial of {factNum2Display} is: {Factorial(factNum2Display)}");            
+            display($"The Fibonacci number of {fibNum} is: {FIbonacci(fibNum)}");
+            display($"The division of 15 & 3 is: {Divide(16.6, 4)}");
         }
 
     }
